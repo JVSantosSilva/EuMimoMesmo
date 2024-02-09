@@ -18,7 +18,8 @@ import Image from 'next/image'
 import { ScrollArea } from './ui/scroll-area'
 import CartItem from './CartItem'
 import { useEffect, useState } from 'react'
-import { useCart } from '@/config/use-cart'
+import { useCart } from '@/hooks/use-cart'
+
 
 const Cart = () => {
   const { items } = useCart()

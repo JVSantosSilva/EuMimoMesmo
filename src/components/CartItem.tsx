@@ -1,5 +1,5 @@
 import { PRODUCT_CATEGORIES } from '@/config'
-import { useCart } from '@/config/use-cart'
+import { useCart } from '@/hooks/use-cart'
 import { formatPrice } from '@/lib/utils'
 import { Product } from '@/payload-types'
 import { ImageIcon, X } from 'lucide-react'
@@ -52,7 +52,7 @@ const CartItem = ({ product }: { product: Product }) => {
                 onClick={() => removeItem(product.id)}
                 className='flex items-center gap-0.5'>
                 <X className='w-3 h-4' />
-                Remove
+                Remover
               </button>
             </div>
           </div>
