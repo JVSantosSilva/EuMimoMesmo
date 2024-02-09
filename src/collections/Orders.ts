@@ -13,9 +13,9 @@ const yourOwn: Access = ({ req: { user } }) => {
 export const Orders: CollectionConfig = {
   slug: 'orders',
   admin: {
-    useAsTitle: 'Your Orders',
+    useAsTitle: 'Seus pedidos',
     description:
-      'A summary of all your orders on DigitalHippo.',
+      'Um resumo de todos os seus pedidos em EuMimoMesmo',
   },
   access: {
     read: yourOwn,
