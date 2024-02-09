@@ -100,7 +100,7 @@ export const Products: CollectionConfig = {
             await stripe.products.create({
               name: data.name,
               default_price_data: {
-                currency: 'USD',
+                currency: 'BRL',
                 unit_amount: Math.round(data.price * 100),
               },
             })
@@ -150,13 +150,8 @@ export const Products: CollectionConfig = {
       required: true,
     },
     {
-      name: 'description',
-      type: 'textarea',
-      label: 'Product details',
-    },
-    {
       name: 'price',
-      label: 'Price in USD',
+      label: 'Valor em BRL',
       min: 0,
       max: 1000,
       type: 'number',
@@ -171,14 +166,7 @@ export const Products: CollectionConfig = {
       ),
       required: true,
     },
-    {
-      name: 'product_files',
-      label: 'Product file(s)',
-      type: 'relationship',
-      required: true,
-      relationTo: 'product_files',
-      hasMany: false,
-    },
+
     {
       name: 'approvedForSale',
       label: 'Product Status',

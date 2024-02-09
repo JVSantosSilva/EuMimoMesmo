@@ -1,31 +1,21 @@
 export const PRODUCT_CATEGORIES = [
   {
-    label: "UI Kits",
-    value: "ui_kits" as const, 
+    label: "Laços",
+    value: "laços" as const, 
     featured: [
       {
-        name: "Editor picks",
-        href: "#",
-        imageSrc: '/nav/ui-kits/mixed.jpg',
-      },
-      {
-        name: "New Arrival",
+        name: "Novos Produtos",
         href: "#",
         imageSrc: '/nav/ui-kits/blue.jpg',
       }
     ]
   },
   {
-    label: "Icons",
-    value: "icons" as const, 
+    label: "Tiara",
+    value: "tiaras" as const, 
     featured: [
       {
-        name: "Favorite Icon Picks",
-        href: "#",
-        imageSrc: '/nav/icons/mixed.jpg',
-      },
-      {
-        name: "New Arrival",
+        name: "Novos Produtos",
         href: "#",
         imageSrc: '/nav/icons/blue.jpg',
       }
