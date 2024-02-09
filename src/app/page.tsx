@@ -1,4 +1,4 @@
-import MaxWithWraper from "@/components/MaxWidthWraper"
+import MaxWidthWrapper from "@/components/MaxWidthWrapper"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, HandCoins, Shield } from "lucide-react"
 
@@ -26,7 +26,7 @@ const perks = [
 export default function Home() {
   return (
     <>
-      <MaxWithWraper>
+      <MaxWidthWrapper>
         <div className='py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
           <h1 className="text-4xl font-bold tracking-tight text-gray--900 sm:text-6xl">Seu ambiente de compra de{' '}<span className="text-pink-600">laços criados com carinho</span> 
         </h1>
@@ -38,10 +38,10 @@ export default function Home() {
           </div>
         </div>
 
-      </MaxWithWraper>
+      </MaxWidthWrapper>
 
       <section className='border-t border-gray-200 bg-gray-50'>
-        *<MaxWithWraper className='py-20'>
+        *<MaxWidthWrapper className='py-20'>
           <div className='grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0'>
             {perks.map((perk) => (
               <div
@@ -64,7 +64,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </MaxWithWraper>
+        </MaxWidthWrapper>
       </section>
     </>
   )
