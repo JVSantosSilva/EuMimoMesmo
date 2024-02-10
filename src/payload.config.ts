@@ -23,7 +23,7 @@ export default buildConfig({
     user: 'users',
     bundler: viteBundler(),
     meta: {
-      titleSuffix: '- DigitalHippo',
+      titleSuffix: '- EuMimoMesmo',
       favicon: '/favicon.ico',
       ogImage: '/thumbnail.jpg',
     },
