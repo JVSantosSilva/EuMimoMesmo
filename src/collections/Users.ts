@@ -26,7 +26,7 @@ export const Users: CollectionConfig = {
   },
   access: {
     read: adminsAndUser,
-    create: () => true,
+    create: ({ req }) => req.user.role === 'admin',
     update: ({ req }) => req.user.role === 'admin',
     delete: ({ req }) => req.user.role === 'admin',
   },
@@ -45,16 +45,16 @@ export const Users: CollectionConfig = {
       relationTo: 'products',
       hasMany: true,
     },
-    {
+    /*{
       name: 'product_files',
-      label: 'Product files',
+      //label: 'Product files',
       admin: {
         condition: () => false,
       },
       type: 'relationship',
-      relationTo: 'product_files',
+      //relationTo: 'product_files',
       hasMany: true,
-    },
+    },*/
     {
       name: 'role',
       defaultValue: 'user',

@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <MaxWidthWrapper>
         <div className='py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
-          <h1 className="text-4xl font-bold tracking-tight text-gray--900 sm:text-6xl">Seu ambiente de compra de{' '}<span className="text-pink-600">laços criados com carinho</span> 
+          <h1 className="text-4xl font-bold tracking-tight text-gray--900 sm:text-6xl">Seu ambiente de compra de{' '}<span className="text-pink-600">laços e tiaras criados com carinho</span> 
         </h1>
           <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
           Bem-vindo ao Eu Mimo Mesmo. Todos os produtos são feitos com o maior amor necessário
