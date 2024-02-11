@@ -11,7 +11,7 @@ export const PRODUCT_CATEGORIES = [
     ]
   },
   {
-    label: "Tiara",
+    label: "Tiaras",
     value: "tiaras" as const, 
     featured: [
       {

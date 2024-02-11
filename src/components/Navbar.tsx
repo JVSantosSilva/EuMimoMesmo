@@ -14,11 +14,11 @@ const Navbar = async () => {
   const { user } = await getServerSideUser(nextCookies)
 
   return (
-    <div className='bg-white sticky z-50 top-0 inset-x-0 h-16'>
-      <header className='relative bg-white'>
+    <div className='bg-white sticky z-50 top-0 inset-x-0 h-16 '>
+      <header className='relative bg-white '>
         <MaxWidthWrapper>
           <div className='border-b border-gray-200'>
-            <div className='flex h-16 items-center'>
+            <div className='flex h-30 items-center'>
               <MobileNav />
 
               <div className='ml-4 flex lg:ml-0'>
