@@ -101,7 +101,7 @@ const Page = () => {
                       'focus-visible:ring-red-500':
                         errors.email,
                     })}
-                    placeholder='you@example.com'
+                    placeholder='exemplo@gmail.com'
                   />
                   {errors?.email && (
                     <p className='text-sm text-red-500'>
@@ -111,7 +111,7 @@ const Page = () => {
                 </div>
 
                 <div className='grid gap-1 py-2'>
-                  <Label htmlFor='password'>Password</Label>
+                  <Label htmlFor='password'>Senha</Label>
                   <Input
                     {...register('password')}
                     type='password'
@@ -119,7 +119,7 @@ const Page = () => {
                       'focus-visible:ring-red-500':
                         errors.password,
                     })}
-                    placeholder='Password'
+                    placeholder='Senha'
                   />
                   {errors?.password && (
                     <p className='text-sm text-red-500'>

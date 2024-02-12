@@ -1,5 +1,5 @@
 import { buildConfig } from 'payload/config'
-import { viteBundler } from '@payloadcms/bundler-vite'
+//import { viteBundler } from '@payloadcms/bundler-vite'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
@@ -8,6 +8,7 @@ import dotenv from 'dotenv'
 import { Products } from './collections/Products/Products'
 import { Media } from './collections/Media'
 import { Orders } from './collections/Orders'
+import { webpackBundler } from '@payloadcms/bundler-webpack'
 
 dotenv.config({
   path: path.resolve(__dirname, '../.env'),
@@ -21,7 +22,7 @@ export default buildConfig({
   },
   admin: {
     user: 'users',
-    bundler: viteBundler(),
+    bundler: webpackBundler(),
     meta: {
       titleSuffix: '- EuMimoMesmo',
       favicon: '/favicon.ico',

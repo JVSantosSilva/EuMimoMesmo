@@ -19,7 +19,6 @@ import {
 } from '@/lib/validators/account-credentials-validator'
 import { trpc } from '@/trpc/client'
 import { toast } from 'sonner'
-import { ZodError } from 'zod'
 import { useRouter, useSearchParams } from 'next/navigation'
 
 const Page = () => {
@@ -47,7 +46,7 @@ const Page = () => {
   const { mutate: signIn, isLoading } =
     trpc.auth.signIn.useMutation({
       onSuccess: async () => {
-        toast.success('Signed in successfully')
+        toast.success('Login feito com sucesso')
 
         router.refresh()
 
@@ -65,7 +64,7 @@ const Page = () => {
       },
       onError: (err) => {
         if (err.data?.code === 'UNAUTHORIZED') {
-          toast.error('Invalid email or password.')
+          toast.error('Email ou senha inválidos.')
         }
       },
     })
@@ -84,8 +83,7 @@ const Page = () => {
           <div className='flex flex-col items-center space-y-2 text-center'>
             <Icons.logo className='h-20 w-20' />
             <h1 className='text-2xl font-semibold tracking-tight'>
-              Sign in to your {isSeller ? 'seller' : ''}{' '}
-              account
+              Entre na sua conta {' '}
             </h1>
 
             <Link
@@ -94,7 +92,7 @@ const Page = () => {
                 className: 'gap-1.5',
               })}
               href='/sign-up'>
-              Don&apos;t have an account?
+              N&atilde;o possui uma conta?
               <ArrowRight className='h-4 w-4' />
             </Link>
           </div>
@@ -110,7 +108,7 @@ const Page = () => {
                       'focus-visible:ring-red-500':
                         errors.email,
                     })}
-                    placeholder='you@example.com'
+                    placeholder='exemplo@gmail.com'
                   />
                   {errors?.email && (
                     <p className='text-sm text-red-500'>
@@ -120,7 +118,7 @@ const Page = () => {
                 </div>
 
                 <div className='grid gap-1 py-2'>
-                  <Label htmlFor='password'>Password</Label>
+                  <Label htmlFor='password'>Senha</Label>
                   <Input
                     {...register('password')}
                     type='password'
@@ -128,7 +126,7 @@ const Page = () => {
                       'focus-visible:ring-red-500':
                         errors.password,
                     })}
-                    placeholder='Password'
+                    placeholder='Senha'
                   />
                   {errors?.password && (
                     <p className='text-sm text-red-500'>
@@ -141,39 +139,11 @@ const Page = () => {
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
-                  Sign in
+                  Fazer login
                 </Button>
               </div>
             </form>
 
-            <div className='relative'>
-              <div
-                aria-hidden='true'
-                className='absolute inset-0 flex items-center'>
-                <span className='w-full border-t' />
-              </div>
-              <div className='relative flex justify-center text-xs uppercase'>
-                <span className='bg-background px-2 text-muted-foreground'>
-                  or
-                </span>
-              </div>
-            </div>
-
-            {isSeller ? (
-              <Button
-                onClick={continueAsBuyer}
-                variant='secondary'
-                disabled={isLoading}>
-                Continue as customer
-              </Button>
-            ) : (
-              <Button
-                onClick={continueAsSeller}
-                variant='secondary'
-                disabled={isLoading}>
-                Continue as seller
-              </Button>
-            )}
           </div>
         </div>
       </div>
