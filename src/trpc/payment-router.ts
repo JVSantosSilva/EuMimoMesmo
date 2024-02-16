@@ -74,6 +74,9 @@ export const paymentRouter = router({
               orderId: order.id,
             },
             line_items,
+            shipping_address_collection: {
+              allowed_countries: ['BR'],
+            },
           })
 
         return { url: stripeSession.url }
