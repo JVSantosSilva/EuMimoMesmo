@@ -69,17 +69,15 @@ const ThankYouPage = async ({
       <div>
         <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-32 xl:gap-x-24'>
           <div className='lg:col-start-2'>
-            <p className='text-sm font-medium text-blue-600'>
-              Order successful
+            <p className='text-sm font-medium text-pink-600'>
+              Pedido realizado com sucesso
             </p>
             <h1 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
-              Thanks for ordering
+              Obrigado pela compra
             </h1>
             {order._isPaid ? (
               <p className='mt-2 text-base text-muted-foreground'>
-                Your order was processed and your assets are
-                available to download below. We&apos;ve sent
-                your receipt and order details to{' '}
+                Seu pedido foi processado. N&oacute;s enviamos os detalhes para{' '}
                 {typeof order.user !== 'string' ? (
                   <span className='font-medium text-gray-900'>
                     {order.user.email}
@@ -89,9 +87,7 @@ const ThankYouPage = async ({
               </p>
             ) : (
               <p className='mt-2 text-base text-muted-foreground'>
-                We appreciate your order, and we&apos;re
-                currently processing it. So hang tight and
-                we&apos;ll send you confirmation very soon!
+                N&oacute;s apreciamos seu pedido e agora estamos nos &uacute;ltimos detalhes
               </p>
             )}
 
@@ -140,18 +136,18 @@ const ThankYouPage = async ({
                             </h3>
 
                             <p className='my-1'>
-                              Category: {label}
+                              Categoria: {label}
                             </p>
                           </div>
 
-                          {order._isPaid ? (
+                          {/*{order._isPaid ? (
                             <a
                               //href={downloadUrl}
                               download={product.name}
                               className='text-blue-600 hover:underline underline-offset-2'>
                               Download asset
                             </a>
-                          ) : null}
+                          ) : null}*/}
                         </div>
 
                         <p className='flex-none font-medium text-gray-900'>
@@ -196,7 +192,7 @@ const ThankYouPage = async ({
                 <Link
                   href='/products'
                   className='text-sm font-medium text-pink-600 hover:text-pink-500'>
-                  Continue shopping &rarr;
+                  Continue a comprar &rarr;
                 </Link>
               </div>
             </div>

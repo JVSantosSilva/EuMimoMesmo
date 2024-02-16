@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
-    "@payloadcms/bundler-vite": "^0.1.6",
     "@payloadcms/bundler-webpack": "^1.0.6",
     "@payloadcms/db-mongodb": "^1.4.0",
     "@payloadcms/richtext-slate": "^1.4.0",

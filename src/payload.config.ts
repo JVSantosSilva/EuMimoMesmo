@@ -1,5 +1,4 @@
 import { buildConfig } from 'payload/config'
-//import { viteBundler } from '@payloadcms/bundler-vite'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
