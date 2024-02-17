@@ -51,7 +51,7 @@ const Cart = () => {
       </SheetTrigger>
       <SheetContent className='flex w-full flex-col pr-0 sm:max-w-lg'>
         <SheetHeader className='space-y-2.5 pr-6'>
-          <SheetTitle>Cart ({itemCount})</SheetTitle>
+          <SheetTitle>Carrinho ({itemCount})</SheetTitle>
         </SheetHeader>
         {itemCount > 0 ? (
           <>
@@ -69,12 +69,12 @@ const Cart = () => {
               <Separator />
               <div className='space-y-1.5 text-sm'>
                 <div className='flex'>
-                  <span className='flex-1'>Shipping</span>
+                  <span className='flex-1'>Realizando processo de entrega</span>
                   <span>Free</span>
                 </div>
                 <div className='flex'>
                   <span className='flex-1'>
-                    Transaction Fee
+                    Taxa
                   </span>
                   <span>{formatPrice(fee)}</span>
                 </div>
@@ -105,9 +105,9 @@ const Cart = () => {
               aria-hidden='true'
               className='relative mb-4 h-60 w-60 text-muted-foreground'>
               <Image
-                src='/hippo-empty-cart.png'
+                src='/hippo-empty-cart.jpg'
                 fill
-                alt='empty shopping cart hippo'
+                alt='carrinho vazio'
               />
             </div>
             <div className='text-xl font-semibold'>

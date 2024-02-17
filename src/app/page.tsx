@@ -34,14 +34,14 @@ export default function Home() {
           Bem-vindo ao Eu Mimo Mesmo. Todos os produtos são feitos com o maior amor necessário
           </p>
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
-            <Button variant="ghost">Confira nossa qualidade &rarr;</Button>
+            <Button variant="ghost" className="hover:bg-pink-50">Confira nossa qualidade &rarr;</Button>
           </div>
         </div>
 
       </MaxWidthWrapper>
-
-      <section className='border-t border-gray-200 bg-gray-50'>
-        *<MaxWidthWrapper className='py-20'>
+      <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" ><path  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill" fill="#FDF2F8" fill-opacity="1"></path></svg>
+      <section className='border-t border-pink-50 bg-pink-50'>
+        <MaxWidthWrapper className='py-20'>
           <div className='grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0'>
             {perks.map((perk) => (
               <div
@@ -54,7 +54,7 @@ export default function Home() {
                 </div>
 
                 <div className='mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6'>
-                  <h3 className='text-base font-medium text-gray-900'>
+                  <h3 className='text-base font-medium text-pink-900'>
                     {perk.name}
                   </h3>
                   <p className='mt-3 text-sm text-muted-foreground'>

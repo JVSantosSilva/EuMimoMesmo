@@ -31,7 +31,7 @@ const Footer = () => {
                 <div className='absolute inset-0 overflow-hidden rounded-lg'>
                   <div
                     aria-hidden='true'
-                    className='absolute bg-zinc-50 inset-0 bg-gradient-to-br bg-opacity-90'
+                    className='absolute bg-pink-50 inset-0 bg-gradient-to-br bg-opacity-90'
                   />
                 </div>
 
