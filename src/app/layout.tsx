@@ -8,7 +8,7 @@ import './globals.css'
 import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
-
+/*TODO*/
 export const metadata = constructMetadata()
 
 export default function RootLayout({

@@ -1,6 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
+
 import MaxWidthWrapper from "@/components/MaxWidthWrapper"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, HandCoins, Shield } from "lucide-react"
+import Carousel from "@/components/Carousel";
+
+import slide_image_1 from './assets/img_1.jpg';
+import slide_image_2 from './assets/img_2.jpg';
+import slide_image_3 from './assets/img_3.jpg';
+import slide_image_4 from './assets/img_4.jpg';
+import slide_image_5 from './assets/img_5.jpg';
+import slide_image_6 from './assets/img_6.jpg';
+import slide_image_7 from './assets/img_7.jpg';
+
+
 
 const perks = [
   {
@@ -23,7 +36,20 @@ const perks = [
   },
 ]
 
+
+
 export default function Home() {
+
+  const slides = [
+    slide_image_1,
+    slide_image_2,
+    slide_image_3,
+    slide_image_4,
+    slide_image_5,
+    slide_image_6,
+    slide_image_7
+  ]
+  
   return (
     <>
       <MaxWidthWrapper>
@@ -36,10 +62,14 @@ export default function Home() {
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
             <Button variant="ghost" className="hover:bg-pink-50">Confira nossa qualidade &rarr;</Button>
           </div>
+          <div className="size-2/3 ">
+            <Carousel autoSlide={true} autoSlideInterval={3000} slides={slides} />
+          </div>
         </div>
-
       </MaxWidthWrapper>
-      <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" ><path  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill" fill="#FDF2F8" fill-opacity="1"></path></svg>
+
+      <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" ><path  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill" fill="#FDF2F8" fillOpacity="1"></path>
+      </svg>
       <section className='border-t border-pink-50 bg-pink-50'>
         <MaxWidthWrapper className='py-20'>
           <div className='grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0'>
@@ -52,7 +82,7 @@ export default function Home() {
                     {<perk.Icon className='w-1/3 h-1/3' />}
                   </div>
                 </div>
-
+                
                 <div className='mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6'>
                   <h3 className='text-base font-medium text-pink-900'>
                     {perk.name}
@@ -64,6 +94,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+          
         </MaxWidthWrapper>
       </section>
     </>
