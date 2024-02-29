@@ -17,6 +17,9 @@ export interface Config {
   };
   globals: {};
 }
+/*****************MercadoLivre********************/
+
+/*****************MercadoLivre********************/
 export interface User {
   id: string;
   products?: (string | Product)[] | null;

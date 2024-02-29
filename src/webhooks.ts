@@ -45,7 +45,7 @@ export const stripeWebhookHandler = async (
   ) {
     return res
       .status(400)
-      .send(`Webhook Error: No user present in metadata`)
+      .send(`Webhook Erro: Usuário não presente na metadata`)
   }
 
   if (event.type === 'checkout.session.completed') {
@@ -65,7 +65,7 @@ export const stripeWebhookHandler = async (
     if (!user)
       return res
         .status(404)
-        .json({ error: 'No such user exists.' })
+        .json({ error: 'Usuário não existe.' })
 
     const { docs: orders } = await payload.find({
       collection: 'orders',
@@ -99,10 +99,10 @@ export const stripeWebhookHandler = async (
     // send receipt
     try {
       const data = await resend.emails.send({
-        from: 'DigitalHippo <hello@joshtriedcoding.com>',
+        from: 'EuMimoMesmo <>' /*TODO*/,
         to: [user.email],
         subject:
-          'Thanks for your order! This is your receipt.',
+          'Obrigado por realizar o pedido!',
         html: ReceiptEmailHtml({
           date: new Date(),
           email: user.email,

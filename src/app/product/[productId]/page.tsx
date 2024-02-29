@@ -5,7 +5,7 @@ import ProductReel from '@/components/ProductReel'
 import { PRODUCT_CATEGORIES } from '@/config'
 import { getPayloadClient } from '@/get-payload'
 import { formatPrice } from '@/lib/utils'
-import { Check, Shield } from 'lucide-react'
+import { Check } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
