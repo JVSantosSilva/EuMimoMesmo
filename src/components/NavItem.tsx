@@ -67,7 +67,7 @@ const NavItem = ({
                       onClick={() => close}
                       key={item.name}
                       className='group relative text-base sm:text-sm'>
-                      <div className='relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75'>
+                      <div className='relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75  hover:bg-pink-50'>
                         <Image
                           src={item.imageSrc}
                           alt='product category image'

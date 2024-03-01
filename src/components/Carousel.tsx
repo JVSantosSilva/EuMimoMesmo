@@ -36,7 +36,7 @@ export default function Carousel({
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {slides.map((slide_image_) => (
-          <Image src={slide_image_} alt="" />
+          <Image 	style={{objectFit: "fill"}} src={slide_image_} alt="" />
         ))}
       </div>
       <div className="absolute inset-0 flex items-center justify-between p-4">
