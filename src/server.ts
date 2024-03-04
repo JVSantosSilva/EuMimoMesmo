@@ -12,6 +12,7 @@ import path from 'path'
 import { PayloadRequest } from 'payload/types'
 import { parse } from 'url'
 
+import { SellingPartner } from "amazon-sp-api";
 
 
 const app = express()
@@ -107,6 +108,20 @@ const start = async () => {
     })
   })
 }
-
+(async () => {
+  try {
+    const spClient = new SellingPartner({
+      region: "na", // The region to use for the SP-API endpoints ("eu", "na" or "fe")
+      refresh_token: "<REFRESH_TOKEN>" // The refresh token of your app user
+    });
+    let res = await spClient.callAPI({
+      operation: "getMarketplaceParticipations",
+      endpoint: "sellers"
+    });
+    console.log(res);
+  } catch (e) {
+    console.log(e);
+  }
+})();
 
 start()

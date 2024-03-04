@@ -5,7 +5,6 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, HandCoins, Shield } from "lucide-react"
 import Carousel from "@/components/Carousel";
-
 import slide_image_1 from './assets/img_1.jpg';
 import slide_image_2 from './assets/img_2.jpg';
 import slide_image_3 from './assets/img_3.jpg';
@@ -36,8 +35,6 @@ const perks = [
       "Oferecemos preços em conta",
   },
 ]
-
-
 
 export default function Home() {
 
