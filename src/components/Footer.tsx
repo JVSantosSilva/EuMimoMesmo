@@ -5,14 +5,20 @@ import MaxWidthWrapper from './MaxWidthWrapper'
 import { Icons } from './Icons'
 import Link from 'next/link'
 
+import Image from 'next/image'
+
+import siteProtegido from '../../public/siteProtegido.png'
+
+import googleSecurity from '../../public/googleSecurity.png'
 const Footer = () => {
+  
   const pathname = usePathname()
   const pathsToMinimize = [
     '/verify-email',
     '/sign-up',
     '/sign-in',
   ]
-
+  
   return (
     <footer className='bg-white flex-grow-0'>
       <MaxWidthWrapper>
@@ -63,6 +69,19 @@ const Footer = () => {
                 href='#'
                 className='text-sm text-muted-foreground hover:text-gray-600'>
                 Política de cookies
+              </Link>
+              <Link
+                href="https://transparencyreport.google.com/safe-browsing/search?url=eumimomesmo.com.br&hl=pt"
+                target="_blank"
+              >
+                <Image height={25} width={225} src={googleSecurity} alt="ceritficado de segurança"/>
+              </Link>
+              
+              <Link
+                href="" //TODO
+                target="_blank"
+              >
+                <Image height={25} width={190} src={siteProtegido} alt="ceritficado de segurança SSL"/>
               </Link>
             </div>
           </div>
