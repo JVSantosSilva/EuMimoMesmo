@@ -35,13 +35,11 @@ export default function Carousel({
         className="flex transition-transform ease-out duration-500"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
-<<<<<<< HEAD
-        {slides.map((slide_image_) => (
-          <Image 	style={{objectFit: "fill"}} src={slide_image_} alt="" />
-=======
+
+
         {slides.map((slide_image_, index) => (
           <Image key={index} src={slide_image_} alt="Slide de imagens" layout="responsive"/>
->>>>>>> refs/remotes/origin/master
+
         ))}
       </div>
       <div className="absolute inset-0 flex items-center justify-between p-4">
