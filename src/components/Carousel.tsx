@@ -1,6 +1,6 @@
 // /home/apollo/EuMimoMesmo/src/components/Carousel.tsx
-/* eslint-disable react/jsx-key */
-'use client'
+/* eslint-disable react/jsx-key */ // Desativa a regra de key do ESLint para este arquivo.
+'use client' // Instrui o Next.js a carregar este módulo apenas no lado do cliente.
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import Image, { StaticImageData } from 'next/image';
@@ -30,7 +30,7 @@ export default function Carousel({
   }, []);
 
   return (
-    <div className="overflow-hidden relative">
+    <div className="overflow-hidden relative" style={{ height: '300px' }}>
       <div
         className="flex transition-transform ease-out duration-500"
         style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -38,7 +38,9 @@ export default function Carousel({
 
 
         {slides.map((slide_image_, index) => (
-          <Image key={index} src={slide_image_} alt="Slide de imagens" layout="responsive"/>
+          <div key={index} className="flex-shrink-0 w-full h-full">
+          <Image src={slide_image_} alt="Slide de imagens" style={{ height: '300px' }} />
+          </div>
 
         ))}
       </div>
