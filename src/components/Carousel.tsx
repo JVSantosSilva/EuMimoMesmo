@@ -35,12 +35,10 @@ export default function Carousel({
         className="flex transition-transform ease-out duration-500"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
-
-        {slides.map((slide_image_, index) => (
-          <div key={index} className="flex-shrink-0 w-full h-full">
-          <Image src={slide_image_} alt="Slide de imagens" style={{ height: '300px' }} />
-          </div>
-
+      {slides.map((slide_image_, index) => (
+      <div key={index} className="flex-shrink-0 w-full h-full">
+        <Image src={slide_image_} alt="Slide de imagens" style={{ height: '300px' }} />
+      </div>
         ))}
       </div>
       <div className="absolute inset-0 flex items-center justify-between p-4">
