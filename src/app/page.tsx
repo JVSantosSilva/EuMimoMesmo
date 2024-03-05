@@ -5,6 +5,8 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, HandCoins, Shield } from "lucide-react"
 import Carousel from "@/components/Carousel";
+import Link from 'next/link'
+
 import slide_image_1 from './assets/img_1.jpg';
 import slide_image_2 from './assets/img_2.jpg';
 import slide_image_3 from './assets/img_3.jpg';
@@ -58,7 +60,9 @@ export default function Home() {
           Bem-vindo ao Eu Mimo Mesmo. Todos os produtos são feitos com o maior amor necessário
           </p>
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
-            <Button variant="ghost" className="hover:bg-pink-50">Confira nossa qualidade &rarr;</Button>
+            <Link href='/produtos'>
+              <Button variant="ghost" className="hover:bg-pink-50">Confira nossa qualidade &rarr;</Button>
+            </Link>
           </div>
         </div>
       </MaxWidthWrapper>
