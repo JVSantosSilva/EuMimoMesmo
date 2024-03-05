@@ -77,7 +77,7 @@ const Footer = () => {
                 <Image height={25} width={225} src={googleSecurity} alt="ceritficado de segurança"/>
               </Link>
               <Link
-                href="" //TODO
+                href="https://www.ssllabs.com/ssltest/analyze.html?d=eumimomesmo.com.br" 
                 target="_blank"
               >
                 <Image height={25} width={190} src={siteProtegido} alt="ceritficado de segurança SSL"/>
