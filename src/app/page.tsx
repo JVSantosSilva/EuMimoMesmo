@@ -14,6 +14,7 @@ import slide_image_4 from './assets/img_4.jpg';
 import slide_image_5 from './assets/img_5.jpg';
 import slide_image_6 from './assets/img_6.jpg';
 import slide_image_7 from './assets/img_7.jpg';
+import slide_image_8 from './assets/img_8.png';
 
 
 
@@ -47,7 +48,8 @@ export default function Home() {
     slide_image_4,
     slide_image_5,
     slide_image_6,
-    slide_image_7
+    slide_image_7,
+    slide_image_8
   ]
   
   return (
