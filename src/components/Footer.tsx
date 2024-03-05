@@ -61,6 +61,8 @@ const Footer = () => {
               className='text-sm text-muted-foreground hover:text-gray-600'>
               Política de cookies
             </Link>
+          </div>
+          <div className="text-center ">
             <p className='text-sm text-muted-foreground'>
               &copy; {new Date().getFullYear()} Todos os direitos reservados
             </p>
