@@ -65,7 +65,6 @@ const NavItem = ({
                   {category.featured.map((item) => (
                     <div
                       onClick={() => close}
-                      key={item.name}
                       className='group relative text-base sm:text-sm'>
                       <div className='relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75  hover:bg-pink-50'>
                         <Image
@@ -79,7 +78,7 @@ const NavItem = ({
                       <Link
                         href={item.href}
                         className='mt-6 block font-medium text-gray-900'>
-                        {item.name}
+                        
                       </Link>
                       <p
                         className='mt-1'

@@ -4,20 +4,39 @@ export const PRODUCT_CATEGORIES = [
     value: "laços" as const, 
     featured: [
       {
-        name: "Novos Produtos",
         href: "#",
-        imageSrc: '/nav/ui-kits/blue.jpg',
-      }
+        imageSrc: '/Lacinho1.jpg',
+      },
+      {
+        href: "#",
+        imageSrc: '/Lacinho3.jpg',
+      },
+      {
+        href: "#",
+        imageSrc: '/Lacinho4.jpg',
+      },
+      {
+        href: "#",
+        imageSrc: '/Lacinho5.jpg',
+      },
+      {
+        href: "#",
+        imageSrc: '/Lacinho6.jpg',
+      },
+      {
+        href: "#",
+        imageSrc: '/Lacinho7.jpg',
+      },
     ]
   },
+  
   {
     label: "Tiaras",
     value: "tiaras" as const, 
     featured: [
       {
-        name: "Novos Produtos",
         href: "#",
-        imageSrc: '/nav/icons/blue.jpg',
+        imageSrc: '/Lacinho2.jpg',
       }
     ]
   }
