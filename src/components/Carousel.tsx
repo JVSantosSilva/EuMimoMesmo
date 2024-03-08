@@ -16,21 +16,27 @@ export default function Carousel({
   slides: string[] | StaticImageData[];
 }) {
   const [curr, setCurr] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
   const next = () =>
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
 
-  useEffect(() => {
-    if (!autoSlide) return;
-    const slideInterval = setInterval(next, autoSlideInterval);
-    return () => clearInterval(slideInterval);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    useEffect(() => {
+      if (!autoSlide || isHovered) return;
+  
+      const slideInterval = setInterval(next, autoSlideInterval);
+  
+      return () => clearInterval(slideInterval);
+    }, [autoSlide, autoSlideInterval, isHovered, next]);
 
   return (
-    <div className="overflow-hidden relative" style={{ height: '300px' }}>
+    <div className="overflow-hidden relative" 
+    style={{ height: '300px' }}
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)}
+    >
       <div
         className="flex transition-transform ease-out duration-500"
         style={{ transform: `translateX(-${curr * 100}%)` }}
