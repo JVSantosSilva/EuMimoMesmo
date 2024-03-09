@@ -1,5 +1,5 @@
-// /home/apollo/Documentos/projetos_javascript/EuMimoMesmo/src/app/page.tsx
-/* eslint-disable @next/next/no-img-element */
+// EuMimoMesmo/src/app/page.tsx
+
 
 import MaxWidthWrapper from "@/components/MaxWidthWrapper"
 import { Button } from "@/components/ui/button"
@@ -15,6 +15,7 @@ import slide_image_5 from './assets/img_5.jpg';
 import slide_image_6 from './assets/img_6.jpg';
 import slide_image_7 from './assets/img_7.jpg';
 import slide_image_8 from './assets/img_8.png';
+import Carousel_v2 from "@/components/Carousel_v2";
 
 
 
@@ -70,9 +71,14 @@ export default function Home() {
       </MaxWidthWrapper>
 
       <div className="w-full">
+          <Carousel autoSlide={true} autoSlideInterval={2500} slides={slides} />
+      </div>
+      
+      
 
-            <Carousel autoSlide={true} autoSlideInterval={2500} slides={slides} />
-          </div>
+      <div>
+        <Carousel_v2 autoSlide={true} autoSlideInterval={3000} slides={slides} />
+      </div>
 
       <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" ><path  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill" fill="#FDF2F8" fillOpacity="1"></path>
       </svg>
