@@ -1,5 +1,4 @@
-"use client"
-
+'use client'
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
@@ -18,12 +17,16 @@ const Separator = React.forwardRef<
       decorative={decorative}
       orientation={orientation}
       className={cn(
-        "shrink-0 bg-border",
-        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+        "shrink-0",
+        orientation === "horizontal" ? "bg-pink-500" : "bg-pink-500",
+        orientation === "horizontal" ? "h-1" : "w-2",
+        "flex items-center justify-center text-white",
         className
       )}
       {...props}
-    />
+    >
+      <div style={{ backgroundColor: 'white', color: '#ec4899', fontWeight: 'bold', fontSize: '1.6rem', padding:"1em" }}>Lançamentos</div>
+    </SeparatorPrimitive.Root>
   )
 )
 Separator.displayName = SeparatorPrimitive.Root.displayName
