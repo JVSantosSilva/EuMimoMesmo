@@ -17,7 +17,7 @@ import slide_image_7 from './assets/img_7.jpg';
 import slide_image_8 from './assets/img_8.png';
 import Carousel_v2 from "@/components/Carousel_v2";
 
-import { Separator } from "@/components/ui/separator"
+import Separator from "@/components/ui/separator";
 
 
 const perks = [
@@ -65,7 +65,7 @@ export default function Home() {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
             <Link href='/produtos'>
-              <Button variant="ghost" className="hover:bg-pink-50">Confira nossa qualidade &rarr;</Button>
+              <Button variant="ghost" className="hover:bg-pink-50">Confira nosso catálogo completo &rarr;</Button>
             </Link>
           </div>
         </div>
@@ -100,20 +100,26 @@ export default function Home() {
           
         </MaxWidthWrapper>
       </section>
-      <div className="w-full mb-11">
+      <div className="w-full mb-28">
           <Carousel autoSlide={true} autoSlideInterval={2500} slides={slides} />
       </div>
       
       <div className="mb-11">
-      <Separator></Separator>
+        <Separator label={"Lançamentos"}></Separator>
       </div>
 
-      <div className='space-y-4 pr-6'>
-      
-      </div>
-      <div>
+      <div className="space-y-4 mb-28">
         <Carousel_v2 autoSlide={true} autoSlideInterval={3000} slides={slides} />
       </div>
+
+      <div className="mb-11">
+        <Separator label={"Novos Produtos"}></Separator>
+      </div>
+
+      <div className="space-y-4 mb-11">
+        <Carousel_v2 autoSlide={true} autoSlideInterval={3000} slides={slides} />
+      </div>
+
     </>
   )
 }
