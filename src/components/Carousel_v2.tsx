@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import Image, { StaticImageData } from 'next/image';
-import '../app/globals.css'
+import '../app/globals.css' //Para linha 44 (Dispositivos Móveis)
 
 export default function Carousel_v2({
   autoSlide = false,
