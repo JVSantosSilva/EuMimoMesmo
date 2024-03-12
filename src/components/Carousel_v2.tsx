@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import Image, { StaticImageData } from 'next/image';
+import '../app/globals.css'
 
 export default function Carousel_v2({
   autoSlide = false,
@@ -31,15 +32,16 @@ export default function Carousel_v2({
 
   return (
     <div 
-    onMouseEnter={() => setIsHovered(true)}
-    onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative overflow-hidden" style={{ maxHeight: '400px' }}>
         <div className="flex transition-transform ease-out duration-500" style={{ transform: `translateX(-${curr * 25}%)`, height: '400px' }}>
           {slides.map((slide_image_, index) => (
             <div key={index} className="w-1/4 p-2 flex-shrink-0" style={{ height: '100%' }}>
               <div style={{ width: '100%', height: '100%', overflow: 'hidden', position: 'relative', borderRadius:"26px" }}>
-                <Image src={slide_image_} alt="Slide de imagens" layout="fill" objectFit="fill" />
+                {/* Adiciona uma classe CSS específica para dispositivos móveis */}
+                <Image src={slide_image_} alt="Slide de imagens" layout="fill" objectFit="fill" className="mobile-square-image" />
               </div>
             </div>
           ))}
