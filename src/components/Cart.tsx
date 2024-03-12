@@ -9,7 +9,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from './ui/sheet'
-import { Separator } from './ui/separator'
+import Separator from "@/components/ui/separator";
 import { formatPrice } from '@/lib/utils'
 import Link from 'next/link'
 import { buttonVariants } from './ui/button'
@@ -66,7 +66,7 @@ const Cart = () => {
               </ScrollArea>
             </div>
             <div className='space-y-4 pr-6'>
-              <Separator />
+              <Separator label={""}/>
               <div className='space-y-1.5 text-sm'>
                 <div className='flex'>
                   <span className='flex-1'>Realizando processo de entrega</span>
