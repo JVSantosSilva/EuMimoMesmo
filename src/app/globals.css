@@ -73,11 +73,3 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-  .mobile-square-image {
-    object-fit: fill; /* Ajuste o comportamento do objeto para cobrir o conteúdo do contêiner */
-    height: 100% !important; /* Garanta que a altura seja 100% */
-    width: 100% !important; /* Garanta que a largura seja 100% */
-    border-radius: 26px;
-  }
-}

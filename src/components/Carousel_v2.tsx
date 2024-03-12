@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import Image, { StaticImageData } from 'next/image';
-import '../app/globals.css' //Para linha 44 (Dispositivos Móveis)
 
 export default function Carousel_v2({
   autoSlide = false,
@@ -16,11 +15,27 @@ export default function Carousel_v2({
 }) {
   const [curr, setCurr] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); 
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const slideIncrement = isMobile ? 1 : 4;
 
   const prev = () =>
-    setCurr((curr) => (curr - 4 < 0 ? slides.length - 1 : curr - 4));
+    setCurr((curr) => (curr - slideIncrement < 0 ? slides.length - slideIncrement : curr - slideIncrement));
   const next = () =>
-    setCurr((curr) => (curr + 4 >= slides.length ? 0 : curr + 4));
+    setCurr((curr) => (curr + slideIncrement >= slides.length ? 0 : curr + slideIncrement));
 
   useEffect(() => {
     if (!autoSlide || isHovered) return;
@@ -36,12 +51,11 @@ export default function Carousel_v2({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative overflow-hidden" style={{ maxHeight: '400px' }}>
-        <div className="flex transition-transform ease-out duration-500" style={{ transform: `translateX(-${curr * 25}%)`, height: '400px' }}>
+        <div className="flex transition-transform ease-out duration-500" style={{ transform: `translateX(-${curr * (100 / slideIncrement)}%)`, height: '400px' }}>
           {slides.map((slide_image_, index) => (
-            <div key={index} className="w-1/4 p-2 flex-shrink-0" style={{ height: '100%' }}>
+            <div key={index} className={`w-${isMobile ? 'full' : '1/4'} p-2 flex-shrink-0`} style={{ height: '100%' }}>
               <div style={{ width: '100%', height: '100%', overflow: 'hidden', position: 'relative', borderRadius:"26px" }}>
-                {/* Adiciona uma classe CSS específica para dispositivos móveis */}
-                <Image src={slide_image_} alt="Slide de imagens" layout="fill" objectFit="fill" className="mobile-square-image" />
+                <Image src={slide_image_} alt="Slide de imagens" layout="fill" objectFit="fill" />
               </div>
             </div>
           ))}
