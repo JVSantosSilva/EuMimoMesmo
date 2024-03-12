@@ -39,7 +39,7 @@ export default function Carousel_v2({
           {slides.map((slide_image_, index) => (
             <div key={index} className="w-1/4 p-2 flex-shrink-0" style={{ height: '100%' }}>
               <div style={{ width: '100%', height: '100%', overflow: 'hidden', position: 'relative', borderRadius:"26px" }}>
-                <Image src={slide_image_} alt="Slide de imagens" layout="fill" objectFit="cover" />
+                <Image src={slide_image_} alt="Slide de imagens" layout="fill" objectFit="fill" />
               </div>
             </div>
           ))}
