@@ -168,8 +168,8 @@ export const Products: CollectionConfig = {
     },
 
     {
-      name: 'approvedForSale',
-      label: 'Product Status',
+      name: 'aprovadoParaVenda',
+      label: 'Status do produto',
       type: 'select',
       defaultValue: 'pending',
       access: {
@@ -179,16 +179,16 @@ export const Products: CollectionConfig = {
       },
       options: [
         {
-          label: 'Pending verification',
-          value: 'pending',
+          label: 'Verificação pendente',
+          value: 'pendente',
         },
         {
-          label: 'Approved',
-          value: 'approved',
+          label: 'Aprovado',
+          value: 'aprovado',
         },
         {
-          label: 'Denied',
-          value: 'denied',
+          label: 'Negado',
+          value: 'negado',
         },
       ],
     },

@@ -1,3 +1,4 @@
+// src/components/NavItems.tsx
 'use client'
 
 import { PRODUCT_CATEGORIES } from '@/config'
@@ -51,7 +52,6 @@ const NavItems = () => {
             close={close}
             handleOpen={handleOpen}
             isOpen={isOpen}
-            key={category.value}
             isAnyOpen={isAnyOpen}
           />
         )
