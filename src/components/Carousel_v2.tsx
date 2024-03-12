@@ -22,7 +22,7 @@ export default function Carousel_v2({
       setIsMobile(window.innerWidth <= 768); 
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -33,7 +33,7 @@ export default function Carousel_v2({
   const slideIncrement = isMobile ? 1 : 4;
 
   const prev = () =>
-    setCurr((curr) => (curr - slideIncrement < 0 ? slides.length - slideIncrement : curr - slideIncrement));
+    setCurr((curr) => (curr - slideIncrement < 0 ? slides.length - 1 : curr - slideIncrement));
   const next = () =>
     setCurr((curr) => (curr + slideIncrement >= slides.length ? 0 : curr + slideIncrement));
 
@@ -53,7 +53,7 @@ export default function Carousel_v2({
       <div className="relative overflow-hidden" style={{ maxHeight: '400px' }}>
         <div className="flex transition-transform ease-out duration-500" style={{ transform: `translateX(-${curr * (100 / slideIncrement)}%)`, height: '400px' }}>
           {slides.map((slide_image_, index) => (
-            <div key={index} className={`w-${isMobile ? 'full' : '1/4'} p-2 flex-shrink-0`} style={{ height: '100%' }}>
+            <div key={index} className="w-full sm:w-1/4 p-2 flex-shrink-0" style={{ height: '100%' }}>
               <div style={{ width: '100%', height: '100%', overflow: 'hidden', position: 'relative', borderRadius:"26px" }}>
                 <Image src={slide_image_} alt="Slide de imagens" layout="fill" objectFit="fill" />
               </div>
