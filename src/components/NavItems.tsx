@@ -6,6 +6,7 @@ import { useOnClickOutside } from '@/hooks/use-on-click-outside'
 import { useEffect, useRef, useState } from 'react'
 import NavItem from './NavItem'
 import Link from 'next/link'
+import { Button } from './ui/button'
 
 const NavItems = () => {
   const [activeIndex, setActiveIndex] = useState<
@@ -34,12 +35,11 @@ const NavItems = () => {
 
   return (
     <div className='flex gap-4 h-full' ref={navRef}>
-      <div className='flex items-center justify-center'>
-        <Link href={'/'}>
-          Início
-        </Link>
-      </div>
-      
+        <div className='flex items-center'>
+          <Link href='/'>
+            <Button variant="ghost" className="hover:bg-pink-50">Início</Button>
+          </Link>
+        </div>
       {PRODUCT_CATEGORIES.map((category, i) => {
         const handleOpen = () => {
           if (activeIndex === i) {

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import { Icons } from './Icons'
 import NavItems from './NavItems'
-import { buttonVariants } from './ui/button'
+import { Button, buttonVariants } from './ui/button'
 import Cart from './Cart'
 import { getServerSideUser } from '@/lib/payload-utils'
 import { cookies } from 'next/headers'
@@ -33,12 +33,8 @@ const Navbar = async () => {
               <div className='ml-auto flex items-center'>
                 <div className='hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6'>
                   {user ? null : (
-                    <Link
-                      href='/sign-in'
-                      className={buttonVariants({
-                        variant: 'ghost',
-                      })}>
-                      Fazer Login
+                    <Link href='/sign-in'>
+                      <Button variant="ghost" className='hover:bg-pink-50'>Fazer Login</Button>
                     </Link>
                   )}
 
@@ -52,12 +48,8 @@ const Navbar = async () => {
                   {user ? (
                     <UserAccountNav user={user} />
                   ) : (
-                    <Link
-                      href='/sign-up'
-                      className={buttonVariants({
-                        variant: 'ghost',
-                      })}>
-                      Criar Conta
+                    <Link href='/sign-up'>
+                      <Button variant="ghost" className='hover:bg-pink-50'>Criar Conta</Button>
                     </Link>
                   )}
 
