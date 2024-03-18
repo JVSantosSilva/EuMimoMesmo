@@ -28,7 +28,7 @@ const Footer = () => {
         <div className='border-t border-gray-200'>
           {pathsToMinimize.includes(pathname) ? null : (
             <div className='pb-8 pt-16'>
-              <div className='flex flex-col items-center justify-center'>
+              <div className='flex flex-row items-center justify-center'>
                 <Link href="#">
                   <Image height={70} src={instagram} alt="ícone do Instagram"/>
                 </Link>
