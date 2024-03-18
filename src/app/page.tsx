@@ -119,6 +119,7 @@ export default function Home() {
       <div className="space-y-4 mb-11">
         <Carousel_v2 autoSlide={true} autoSlideInterval={3000} slides={slides} />
       </div>
+        
 
     </>
   )

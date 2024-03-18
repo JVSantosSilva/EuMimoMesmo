@@ -27,10 +27,10 @@ const NavItem = ({
   isOpen,
 }: NavItemProps) => {
   return (
-    <div className='flex'>
+    <div className='flex '>
       <div className='relative flex items-center'>
         <Button
-          className='gap-1.5'
+          className='gap-1.5 hover:bg-pink-50'
           onClick={handleOpen}
           variant={isOpen ? 'secondary' : 'ghost'}>
           {category.label}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from './ui/button';
 
 interface AccordionMenuProps {
   label: string; 
@@ -10,7 +11,9 @@ const AccordionMenu: React.FC<AccordionMenuProps> = ({ label }) => {
       <div
         className="text-xl cursor-pointer"
       >
-        {label}
+        <Button variant="ghost" className='hover:bg-pink-50'>
+          {label}
+        </Button>
       </div>
     </div>
   );
