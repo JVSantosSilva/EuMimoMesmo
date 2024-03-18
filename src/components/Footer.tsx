@@ -30,7 +30,8 @@ const Footer = () => {
           {pathsToMinimize.includes(pathname) ? null : (
             <div className='pb-8 pt-16'>
               <div className='flex flex-row items-center justify-center'>
-                <Link href="#">
+                <Link href="https://www.instagram.com/eumimomesmo.lacos/" target='blank'>
+                  <div className='flex flex-row items-center gap-3'>
                   <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
                     </g>
                       <g id="SVGRepo_iconCarrier"> 
@@ -38,7 +39,12 @@ const Footer = () => {
                         </path>
                     </g>
                   </svg>
-                  <Button variant="outline" className='text-pink-600 border-pink-600 hover:bg-pink-50'>SIGA-NOS</Button>
+                  <h1 className='text-pink-600 text-4xl font-bold'>eumimomesmo.lacos</h1>
+                  </div>
+                  <div className='flex flex-row justify-center items-center'>
+                    <Button variant="outline" className='text-pink-600 border-pink-600 hover:bg-pink-50 font-bold'>SIGA-NOS</Button>
+                  </div>
+                  
                 </Link>
                 <Image height={120} src={thumbnail} alt="thumbnail da empresa"/>
               </div>
