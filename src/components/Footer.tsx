@@ -3,13 +3,15 @@
 
 import { usePathname } from 'next/navigation'
 import MaxWidthWrapper from './MaxWidthWrapper'
-import { Icons } from './Icons'
 import Link from 'next/link'
-import Image from 'next/image'
+
 
 import siteProtegido from '../../public/siteProtegido.png'
 import googleSecurity from '../../public/googleSecurity.png'
 import whatsappIcon from '../../public/whatsapp_icon.png' // Certifique-se de que o caminho até o seu ícone do WhatsApp está correto
+import  Image  from 'next/image';
+import instagram from '../../public/instagram.png'
+import thumbnail from '../../public/thumbnail.jpg'
 
 const Footer = () => {
   const pathname = usePathname()
@@ -26,8 +28,11 @@ const Footer = () => {
         <div className='border-t border-gray-200'>
           {pathsToMinimize.includes(pathname) ? null : (
             <div className='pb-8 pt-16'>
-              <div className='flex justify-center'>
-                <Icons.logo className='h-12 w-auto' />
+              <div className='flex flex-col items-center justify-center'>
+                <Link href="#">
+                  <Image height={70} src={instagram} alt="ícone do Instagram"/>
+                </Link>
+                <Image height={120} src={thumbnail} alt="thumbnail da empresa"/>
               </div>
             </div>
           )}

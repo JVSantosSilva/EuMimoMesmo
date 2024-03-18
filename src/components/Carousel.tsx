@@ -33,7 +33,7 @@ export default function Carousel({
 
   return (
     <div className="overflow-hidden relative" 
-    style={{ height: '300px' }}
+    style={{ height: '600px' }}
     onMouseEnter={() => setIsHovered(true)}
     onMouseLeave={() => setIsHovered(false)}
     >
@@ -43,7 +43,7 @@ export default function Carousel({
       >
       {slides.map((slide_image_, index) => (
       <div key={index} className="flex-shrink-0 w-full h-full">
-        <Image src={slide_image_} alt="Slide de imagens" style={{ height: '300px' }} />
+        <Image src={slide_image_} alt="Slide de imagens" style={{ height: '600px' }} />
       </div>
         ))}
       </div>

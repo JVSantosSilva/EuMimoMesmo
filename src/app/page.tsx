@@ -113,7 +113,7 @@ export default function Home() {
       </div>
 
       <div className="mb-11">
-        <Separator label={"Novos Produtos"}></Separator>
+        <Separator label={"Produtos em alta"}></Separator>
       </div>
 
       <div className="space-y-4 mb-11">

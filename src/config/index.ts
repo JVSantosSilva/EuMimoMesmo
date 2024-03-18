@@ -1,42 +1,40 @@
+// /src/config/index.ts
+
 export const PRODUCT_CATEGORIES = [
   {
     label: "Laços",
-    value: "laços" as const, 
+    value: "laços",
     featured: [
       {
+        label: "Bico de Pato",
         href: "#",
-        imageSrc: '/Lacinho1.jpg',
       },
       {
-        href: "#",
-        imageSrc: '/Lacinho3.jpg',
+        label: "Faixas de Bebê",
+        href: '#',
       },
       {
-        href: "#",
-        imageSrc: '/Lacinho4.jpg',
+        label: "Headband",
+        href: '#',
       },
       {
-        href: "#",
-        imageSrc: '/Lacinho5.jpg',
+        label: "Faixa Turbante",
+        href: '#',
       },
       {
+        label: "Xuxinha",
         href: "#",
-        imageSrc: '/Lacinho6.jpg',
-      },
-      {
-        href: "#",
-        imageSrc: '/Lacinho7.jpg',
       },
     ]
   },
   
   {
     label: "Tiaras",
-    value: "tiaras" as const, 
+    value: "tiaras",
     featured: [
       {
+        label:"Tiaras",
         href: "#",
-        imageSrc: '/Lacinho2.jpg',
       }
     ]
   }
